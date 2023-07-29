@@ -4,6 +4,7 @@ on:
   schedule:
     # Run this workflow every day at 2 PM Rome time
     - cron: '0 14 * * *'
+  workflow_dispatch:
 
 jobs:
   download_and_rename:
@@ -29,4 +30,3 @@ jobs:
     - name: Run the script
       run: |
         python script.py
-
