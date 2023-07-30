@@ -30,3 +30,11 @@ jobs:
     - name: Run the script
       run: |
         python script.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Add downloaded file" -a
+        git push
